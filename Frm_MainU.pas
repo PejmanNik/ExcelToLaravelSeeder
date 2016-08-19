@@ -69,7 +69,7 @@ begin
             QuotedStr(Sheet.Cells.item[r, i + 1].Value) + ',');
         end;
 
-      Memo1.Lines.Add(' ]);)');
+      Memo1.Lines.Add(' ]);');
       Memo1.Lines.Add('');;
     end;
 
