@@ -1,5 +1,5 @@
 # Make a Laravel Seeder File From Excel File
-If you need import a excel file into the laravel seeder this app will help you.
+import excel file to laravel seed by one click or at least two :)
 
 ## You may want now:
 * this program need too Microsoft Office Excel be installed earlier.
