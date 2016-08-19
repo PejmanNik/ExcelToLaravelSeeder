@@ -78,6 +78,9 @@ object Form1: TForm1
     FixedRows = 0
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor]
     TabOrder = 4
+    ColWidths = (
+      180
+      180)
     RowHeights = (
       24)
   end

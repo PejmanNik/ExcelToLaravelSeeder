@@ -3,7 +3,8 @@ unit Frm_MainU;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.StdCtrls,
   Vcl.ExtCtrls, System.Win.ComObj;
 
@@ -64,12 +65,12 @@ begin
       for i := 0 to StringGrid1.RowCount - 1 do
         if Length(StringGrid1.Rows[i][1]) > 0 then
         begin
-          Memo1.Lines.Add(QuotedStr(StringGrid1.Rows[i][1]) + ' => ' + QuotedStr(Sheet.Cells.item[r, i + 1].Value));
+          Memo1.Lines.Add(QuotedStr(StringGrid1.Rows[i][1]) + ' => ' +
+            QuotedStr(Sheet.Cells.item[r, i + 1].Value) + ',');
         end;
 
       Memo1.Lines.Add(' ]);)');
-      Memo1.Lines.Add('');
-      ;
+      Memo1.Lines.Add('');;
     end;
 
     // Unassign the Delphi Variant Matrix
@@ -132,4 +133,3 @@ begin
 end;
 
 end.
-
