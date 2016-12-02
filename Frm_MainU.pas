@@ -21,6 +21,7 @@ type
     Shape1: TShape;
     procedure MakeModelClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,7 +63,7 @@ begin
     begin
       Memo1.Lines.Add(Edt_ModelName.Text + '::create([');
 
-      for i := 0 to StringGrid1.RowCount - 1 do
+      for i := 1 to StringGrid1.RowCount - 1 do
         if Length(StringGrid1.Rows[i][1]) > 0 then
         begin
           Memo1.Lines.Add(QuotedStr(StringGrid1.Rows[i][1]) + ' => ' +
@@ -87,6 +88,12 @@ begin
     end;
   end;
 
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  StringGrid1.Rows[0][0]:= 'Excel column';
+  StringGrid1.Rows[0][1]:= 'Output field name';
 end;
 
 procedure TForm1.MakeModelClick(Sender: TObject);
@@ -115,7 +122,7 @@ begin
     RangeMatrix := Sheet.Usedrange.Value;
 
     for r := 1 to y do
-      StringGrid1.Cells[0, (r - 1)] := RangeMatrix[1, r];
+      StringGrid1.Cells[0, (r)] := RangeMatrix[1, r];
 
     // Unassign the Delphi Variant Matrix
     RangeMatrix := Unassigned;

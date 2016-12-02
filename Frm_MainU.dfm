@@ -14,6 +14,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -74,14 +75,14 @@ object Form1: TForm1
     Height = 241
     ColCount = 2
     DefaultColWidth = 180
-    RowCount = 1
-    FixedRows = 0
+    RowCount = 2
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goAlwaysShowEditor]
     TabOrder = 4
     ColWidths = (
       180
       180)
     RowHeights = (
+      24
       24)
   end
   object Edt_WorkSheetNo: TLabeledEdit
